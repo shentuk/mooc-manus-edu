@@ -1,6 +1,6 @@
 # EduManus - 教学领域多智能体协作系统
 
-EduManus 是基于 [MoocManus](https://github.com/anthropics/mooc-manus) 定制的**教学领域多智能体协作系统**。它将通用 AI Agent 能力聚焦于教育教学场景，为教师提供课程规划、作业批改、答疑辅导、学习分析、试题生成等智能化教学辅助服务。
+EduManus 是基于 MoocManus 定制的**教学领域多智能体协作系统**。它将通用 AI Agent 能力聚焦于教育教学场景，为教师提供课程规划、作业批改、答疑辅导、学习分析、试题生成等智能化教学辅助服务。
 
 系统支持完全私有化部署，使用 A2A（Agent-to-Agent）+ MCP（Model Context Protocol）协议连接外部智能体和工具，同时支持在沙箱中安全运行代码和操作。
 
