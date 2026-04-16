@@ -1,0 +1,76 @@
+llm_config:
+  base_url: https://api.deepseek.com/
+  api_key: sk-088bd7c594cf415e90f0139e6f9cf908
+  model_name: deepseek-reasoner
+  temperature: 0.7
+  max_tokens: 8192
+agent_config:
+  max_iterations: 100
+  max_retries: 3
+  max_search_results: 10
+
+# ===== 教学领域配置 =====
+edu_config:
+  # 默认教学场景（留空表示不限定）
+  default_subject: ""
+  default_grade: ""
+  # 教学工具开关
+  enable_course_tool: true
+  enable_assignment_tool: true
+  enable_knowledge_tool: true
+  enable_analytics_tool: true
+  enable_quiz_tool: true
+  # 知识库配置
+  knowledge_base_path: "/data/knowledge_base"
+  # 题库配置
+  quiz_bank_path: "/data/quiz_bank"
+
+mcp_config:
+  mcpServers:
+    amap-maps-streamableHTTP:
+      transport: streamable_http
+      enabled: true
+      description: null
+      env: null
+      command: null
+      args: null
+      url: https://mcp.amap.com/mcp?key=00b05640cc55c0ba2b7f85e0b3f2e6e7
+      headers: null
+    jina-mcp-server:
+      transport: streamable_http
+      enabled: true
+      description: null
+      env: null
+      command: null
+      args: null
+      url: https://mcp.jina.ai/v1
+      headers:
+        Authorization: Bearer jina_133c673d569840d3b1e379a526eee6d4VKMVBI9J5HYE2xd4ys7i6ehZUNb6
+    # ===== 教学MCP服务（预留配置，按需启用） =====
+    # edu-course-platform:
+    #   transport: streamable_http
+    #   enabled: false
+    #   description: "教学课程平台MCP服务，提供课程资源访问"
+    #   url: http://localhost:8080/mcp
+    # edu-quiz-bank:
+    #   transport: streamable_http
+    #   enabled: false
+    #   description: "题库MCP服务，提供海量题目检索"
+    #   url: http://localhost:8081/mcp
+    # edu-knowledge-graph:
+    #   transport: streamable_http
+    #   enabled: false
+    #   description: "知识图谱MCP服务，提供学科知识关联查询"
+    #   url: http://localhost:8082/mcp
+
+a2a_config:
+  a2a_servers: [ ]
+  # ===== 教学A2A服务（预留配置，按需启用） =====
+  # - id: edu-tutor-agent
+  #   base_url: http://localhost:9000
+  #   enabled: false
+  #   description: "专业学科辅导Agent，提供深度答疑服务"
+  # - id: edu-grading-agent
+  #   base_url: http://localhost:9001
+  #   enabled: false
+  #   description: "专业作业批改Agent，支持多学科批改"
