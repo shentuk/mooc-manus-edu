@@ -276,7 +276,6 @@ docker compose down -v
 - [API 服务](./api/README.md)
 - [前端 UI](./ui/README.md)
 - [沙箱服务](./sandbox/README.md)
-- [系统设计文档](./docs/system_design.md)
 
 ---
 
